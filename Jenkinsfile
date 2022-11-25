@@ -74,7 +74,7 @@ pipeline {
         stage('Docker Image Build') {
             agent { label 'agent2' }
             steps {
-                git branch: 'master', url:'https://github.com/yu3papa/guestbook.git'
+                git branch: 'master', url:'https://github.com/kschoi728/guestbook202211.git'
                 sh './mvnw clean package'
                 script {
                     //oDockImage = docker.build(strDockerImage)
